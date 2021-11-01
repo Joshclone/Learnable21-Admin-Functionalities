@@ -1,4 +1,6 @@
 //During the test the env variable is set to test
+//Product refers to Books
+//Product means Books in the library
 process.env.NODE_ENV = "test";
 
 const chai = require("chai");
@@ -77,6 +79,8 @@ describe("library", () => {
   });
   /*
    * Test for /PUT:id
+   * The admin modifies the book(poduct) in the library
+   * (when the  user returns the borrowed book)
    */
   describe("/PUT/:id product", () => {
     it("it should UPDATE a product given the id", (done) => {
